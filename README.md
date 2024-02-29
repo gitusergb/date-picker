@@ -1,4 +1,59 @@
-# Getting Started with Create React App
+
+
+# Date Picker
+
+ ### Link : 
+## Problem Statement
+You are tasked with creating a reusable date picker UI component in React that can be easily exported and used across different applications. The date picker component should allow users to select dates from a calendar interface and provide callbacks to handle selected date changes. It should be customizable, accessible, and compatible with various screen sizes and browsers.
+Technical Constraints:
+Technology Stack: Implement the date picker component using React.js. 
+Accessibility: Ensure the date picker component follows accessibility best practices, making it usable for all users, including those who rely on assistive technologies.
+Customizability: Design the date picker component with customizable options such as date format, initial selected date, minimum and maximum selectable dates, and styling.
+Responsiveness: Make the date picker component responsive to different screen sizes, providing a seamless user experience across devices.
+Functional Requirements:
+Date Selection:
+Display a calendar interface allowing users to navigate between months and select dates.
+Highlight the currently selected date.
+Provide options to navigate between months and years.
+Customization:
+Allow customization of date format (e.g., DD/MM/YYYY, MM/DD/YYYY).
+Support setting the initial selected date and restricting selectable dates within a range (minimum and maximum dates).
+Enable customization of styling to match different application themes.
+Reusability:
+Package the date picker component as a reusable React component that can be easily imported and used in different projects.
+Document the usage and customization options for developers who utilize the component.
+Example Usage
+import React, { useState } from 'react';
+import DatePicker from 'your-datepicker-component';
+
+function App() {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+    // Perform any additional actions on date change
+  };
+
+  return (
+    <div>
+      <h1>Select a Date</h1>
+      <DatePicker
+        selectedDate={selectedDate}
+        onDateChange={handleDateChange}
+        dateFormat="MM/DD/YYYY"
+        minDate={new Date()}
+        maxDate={new Date(new Date().getFullYear() + 1, 11, 31)}
+        // Additional customization props
+      />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +122,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
